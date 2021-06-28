@@ -22,16 +22,23 @@ module prism(l, w, h) {
 
 len = 0.75;
 
-difference() {
-     cube( [len, 1, .5]);
-     translate( [-0.1, 0.2, 0.125])
-	  cube( [len + 0.2, 0.235, .5]);
-     translate( [len/2, 0.8, -0.1])
-	  cylinder( h=1.2, d=0.09);
-}
+// experimentally, this seems to produce correct output
+// for the cura slicer
+scal = 0.254;
 
-rotate( [0, 0, 270])
-    prism( len, .25, .5);
-    translate( [len, 1, 0])
-rotate( [0, 0, 90])
-    prism( len, .25, .5);
+
+scale( [scal, scal, scal]) {
+  difference() {
+       cube( [len, 1, .5]);
+       translate( [-0.1, 0.2, 0.125])
+  	  cube( [len + 0.2, 0.235, .5]);
+       translate( [len/2, 0.8, -0.1])
+  	  cylinder( h=1.2, d=0.09);
+  }
+  
+  rotate( [0, 0, 270])
+      prism( len, .25, .5);
+      translate( [len, 1, 0])
+  rotate( [0, 0, 90])
+      prism( len, .25, .5);
+}
