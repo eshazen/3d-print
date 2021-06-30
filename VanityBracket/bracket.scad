@@ -41,9 +41,15 @@ scale( [scal, scal, scal]) {
        cube( [len, 1, .5]);
        translate( [-0.1, 0.2, 0.125])
   	  cube( [len + 0.2, 0.235, .5]);
+
+
+       translate( [len/2, 0.8, -0.1]) {
+	  $fn = 6;
+	  cylinder( h=nut_thick+0.1, d=nut_clear);
+       }
+
        translate( [len/2, 0.8, -0.1]) {
   	  cylinder( h=1.2, d=hole_dia);
-	  cylinder( h=nut_thick+0.1, d=nut_clear);
 	  translate( [0, 0, 0.5])
 	  cylinder( h=nut_thick+0.1, d=nut_clear);
        }
