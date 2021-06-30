@@ -3,7 +3,18 @@
 //
 //
 
-$fn=16;
+
+len = 0.5;			/* length in X */
+
+hole_dia = 0.130;		/* 4-40 clearance */
+
+nut_dia = 0.255;		/* hex cutout for 4-40 nut */
+nut_clear = 0.300;		/* clearance for nut */
+nut_thick = 0.100;		/* nut thickness */
+
+$fn=64;
+
+// triangular prism from web
 module prism(l, w, h) {
        polyhedron(points=[
                [0,0,h],           // 0    front top corner
@@ -20,8 +31,6 @@ module prism(l, w, h) {
 }
 
 
-len = 0.75;
-
 // experimentally, this seems to produce correct output
 // for the cura slicer
 scal = 0.254;
@@ -32,8 +41,12 @@ scale( [scal, scal, scal]) {
        cube( [len, 1, .5]);
        translate( [-0.1, 0.2, 0.125])
   	  cube( [len + 0.2, 0.235, .5]);
-       translate( [len/2, 0.8, -0.1])
-  	  cylinder( h=1.2, d=0.09);
+       translate( [len/2, 0.8, -0.1]) {
+  	  cylinder( h=1.2, d=hole_dia);
+	  cylinder( h=nut_thick+0.1, d=nut_clear);
+	  translate( [0, 0, 0.5])
+	  cylinder( h=nut_thick+0.1, d=nut_clear);
+       }
   }
   
   rotate( [0, 0, 270])
