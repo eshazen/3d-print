@@ -56,7 +56,11 @@ POSSIBILITY OF SUCH DAMAGE.
 //
 
 //width in mm.
-trayX = 115;
+//trayX = 115;			// 115 is good for dial soap
+                                // (inside dim ~105)
+
+//trayX = 95;                     // 95 for Face soap
+trayX = 165;
 
 //depth in mm.
 trayY = 70; 
