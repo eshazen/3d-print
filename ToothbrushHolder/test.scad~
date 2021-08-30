@@ -1,0 +1,37 @@
+module Chamfered_Cylinder(CylinderDiameter,CylinderHeight,ChamferRadius,ChamferFacits) {
+    difference () {
+        union() {
+            //Central Cyclinder
+            cylinder(d=CylinderDiameter,h=CylinderHeight);
+            //Bottom Chamfer cylinder
+            translate ([0,0,0]) cylinder(d=CylinderDiameter+ChamferRadius,h=ChamferRadius/2);
+            //Top Chamfer cylinder
+            translate ([0,0,CylinderHeight-ChamferRadius/2]) cylinder(d=CylinderDiameter+ChamferRadius,h=ChamferRadius/2);
+        }
+
+        //Generate Bottom chamfer 
+        for (i = [0:1:ChamferFacits-1]) {
+            rotate([90,0,i*360/ChamferFacits+90]) translate([CylinderDiameter/2+ChamferRadius/2,ChamferRadius/2,-ChamferRadius/2]) cylinder(d=ChamferRadius, h=ChamferRadius);
+        }
+
+        //generate Top chamfer
+        for (i = [0:1:ChamferFacits-1]) {
+            rotate([90,0,i*360/ChamferFacits+90]) translate([CylinderDiameter/2+ChamferRadius/2,CylinderHeight-ChamferRadius/2,-ChamferRadius/2]) cylinder(d=ChamferRadius, h=ChamferRadius);
+        }
+    }
+}
+
+
+CylinderDiameter = 15;
+CylinderHeight = 40;
+ChamferRadius = 5;
+ChamferFacits = 50;
+//Its best to have the cylinder facits and the Chamfer facits the same value.
+$fn=ChamferFacits;  
+
+//Extra cylinder on bottom to appease the scad gods
+translate ([0,0,-ChamferRadius]) cylinder(d=CylinderDiameter+ChamferRadius,h=ChamferRadius);
+//Extra cylinder on top to appease the scad gods
+translate ([0,0,CylinderHeight]) cylinder(d=CylinderDiameter+ChamferRadius,h=ChamferRadius);
+//The Cylinder with chamfer
+Chamfered_Cylinder(CylinderDiameter,CylinderHeight,ChamferRadius,ChamferFacits);

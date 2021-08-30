@@ -1,0 +1,15 @@
+//
+// bracket to secure ~ 40mm dia pads of child safety gate
+//
+
+thick = 8;
+diam = 42;
+edge = 12;
+wide = diam + 2*edge;
+
+difference() {
+     translate( [-wide/2, -wide/2, 0])
+	  cube( [wide, wide, thick]);
+     translate( [0, 0, -1])
+	  cylinder( h=thick+2, d=diam);
+}
