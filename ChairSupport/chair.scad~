@@ -1,0 +1,13 @@
+//
+// cyclindrical chair support for
+// broken hydraulic lift Staples chair
+//
+// two half-cylinders with some interlocking bits
+
+
+id = 28;
+hgt = 98;
+wall = 3;
+
+cylinder( h=98, r=id/2+wall);
+

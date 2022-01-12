@@ -1,0 +1,19 @@
+
+width = 300;
+length = 550;
+height = 90;
+
+bottom_thick = 6;
+wall_thick = 4;
+
+module box() {
+
+     cube( [width, length, bottom_thick]);
+     cube( [wall_thick, length, height]);
+     translate( [width-wall_thick, 0, 0])
+	  cube( [wall_thick, length, height]);
+}
+
+box();
+
+	  

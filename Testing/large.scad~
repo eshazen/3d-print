@@ -1,0 +1,20 @@
+//
+// test print for 3D printer diagnosis
+
+width = 160;
+height = 160;
+
+thick = 1.6;
+radius = 5;
+
+module disc() {
+     cylinder( h=thick, r=radius);
+}
+
+
+module plate() {
+     disc();
+}
+
+
+plate();
