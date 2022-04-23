@@ -6,7 +6,8 @@
 /* [Dimensions] */
 
 // inner diameter (for outer dimension add 2x wall thickness) - minimum = 8.0mm
-diameter=34.0;
+// diameter=34.0;
+diameter=35.0;			/* ESH */
 
 // inner height (for outer dimension add 2x wall thickness)
 height=62.5;
@@ -21,7 +22,7 @@ opening_width = 7; //[5:15]
 /* [Appearance] */
 
 // Name to engrave, designed for short (up to 6 letters) name.
-name="Mocha";
+name="Scruffles";
 
 // Second line to engrave, designed to fit 10 digit number. Leave blank to engrave nothing.
 additional_line="";
@@ -50,7 +51,8 @@ lid_top_thick=-1;
 /* [Expert] */
 
 // to show? Only create once! You will get always all parts!
-part = "container_"; // [container_:Container,lid_left_knurled_:Lid - Left Knurled, lid_right_knurled_:Lid - Right Knurled, lid_vertical_knurled_: Lid - Vertical Knurled, lid_double_knurled_:Lid - Double Knurled, lid_simple_non_knurled_:Lid - Simple Non Knurled]
+part = "lid_vertical_knurled_"; 
+// part = "container_"; // [container_:Container,lid_left_knurled_:Lid - Left Knurled, lid_right_knurled_:Lid - Right Knurled, lid_vertical_knurled_: Lid - Vertical Knurled, lid_double_knurled_:Lid - Double Knurled, lid_simple_non_knurled_:Lid - Simple Non Knurled]
 
 // default value -1 means take 1/4 of Wall Thickness
 backlash=-1;
@@ -208,7 +210,7 @@ union()
 };
 translate([0, 0, h/2]) rotate([90, 0, 180]) curve_shape(1.1*wall_thickness() + diameter()/2, 1.2*wall_thickness(), h=h) dog_bone(opening_width, h);
 linear_extrude(wall_thickness()) flower(r);
-translate([0, 0, h/2]) rotate([90, 0, 160]) curve_shape(1.1*wall_thickness() + diameter()/2, .6*wall_thickness(), h=h) rotate([0, 0, 90]) text(name, size=5, halign="center");
+translate([0, 0, h/2]) rotate([90, 0, 160]) curve_shape(1.1*wall_thickness() + diameter()/2, .6*wall_thickness(), h=h) rotate([0, 0, 90]) text(name, size=4, halign="center");
 if (additional_line != "") translate([0, 0, h/2]) rotate([90, 0, 205]) curve_shape(1.1*wall_thickness() + diameter()/2, .6*wall_thickness(), h=h) rotate([0, 0, 90]) text(additional_line, size=2, halign="center");
 }
 
