@@ -31,8 +31,14 @@ module arch_profile(r,ry,w1,w2,h) {
 //
 // make a scaled arch profile with offset for smoothing
 //
+// so with w1=25.4 and w2=19 we measure
+//         w1=27.0 and w2=21.2
+//    diff:    1.6         2.2
+// new:       23.8        16.8
+
 module scaled_arch_profile(s) {
-     arch_profile( 11.6-s, 6.66, 25.4-s*2, 19-s*2, 43.2);     
+//     arch_profile( 11.6-s, 6.66, 25.4-s*2, 19-s*2, 43.2);
+     arch_profile( 10.6-s, 6.66, 23.8-s*2, 16.8-s*2, 43.2);     
 }
 
 //
@@ -204,5 +210,5 @@ module body_hole() {
      }
 }
 
-// rotate( [114, 0, 0])
+rotate( [114, 0, 0])
 body_hole();
