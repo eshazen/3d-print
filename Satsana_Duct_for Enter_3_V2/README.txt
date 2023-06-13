@@ -1,0 +1,1 @@
+Satsana Duct for Ender 3 V2 by x4runnerGunnerx on Thingiverse: https://www.thingiverse.com/thing:4623647
