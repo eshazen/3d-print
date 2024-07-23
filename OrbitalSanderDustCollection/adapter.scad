@@ -33,6 +33,8 @@ s_r2 = 0.375*mm;		/* outer snout curve radius */
 s_hole_dx = 1.875*mm;		/* mounting hole spacing */
 
 s_z = 0.25*mm;			/* length of snout */
+s_ext = 0.25*mm;		/* snout extension down */
+
 wall = 1.6;
 
 hose_dia = 2.25*mm;		/* hose OD (it's tapered a bit) */
@@ -52,6 +54,12 @@ module snout_base() {
 	  translate( [s_x2/2, s_y2/2, 0])
 	       cylinder( h=sm_thk, d=hose_dia+2*wall);
      }
+     difference() {
+       translate( [-wall, -wall, -s_ext+e])
+	 linear_extrude( height=s_ext) rounded_rectangle( s_x2+2*wall, s_y2+2*wall, s_r2);
+       translate( [0, 0, -s_ext])
+       linear_extrude( height=s_ext+2*e) rounded_rectangle( s_x2, s_y2, s_r2);
+     }
 }
 
 module snout() {
@@ -62,8 +70,8 @@ module snout() {
 	  hole_at( s_x2-ho, s_y2/2, 0.15*mm);
 	  translate( [(s_x2-s_x1)/2, (s_y2-s_y1)/2, -e])
 	       linear_extrude( height=s_z+2*e) rounded_rectangle( s_x1, s_y1, s_r1);
-	  translate( [(s_x2-s_x3)/2, (s_y2-s_y1)/2, s_z-2*e])
-	       linear_extrude( height=sm_thk+2*e) rounded_rectangle( s_x3, s_y1, s_r1);
+	  translate( [(s_x2-s_x3)/2, (s_y2-s_y1)/2, s_z-2*e-10])
+	    linear_extrude( height=sm_thk+2*e) rounded_rectangle( s_x3, s_y1, s_r1);
      }
 }
 
