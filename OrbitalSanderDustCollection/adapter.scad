@@ -1,6 +1,8 @@
 //
 // adapter for Master Mechanic orbital sander bag mount point to 2-1/4 inch hose
 //
+// V2:  change s_ext from 0.25 to 0.5 inch and
+//             hose_dia from 2.25 to 2.313 inch
 
 mm = 25.4;
 e = 0.1;
@@ -33,11 +35,11 @@ s_r2 = 0.375*mm;		/* outer snout curve radius */
 s_hole_dx = 1.875*mm;		/* mounting hole spacing */
 
 s_z = 0.25*mm;			/* length of snout */
-s_ext = 0.25*mm;		/* snout extension down */
+s_ext = 0.5*mm;		/* snout extension down */
 
 wall = 1.6;
 
-hose_dia = 2.25*mm;		/* hose OD (it's tapered a bit) */
+hose_dia = 2.313*mm;		/* hose OD (it's tapered a bit) */
 hose_len = 1.5*mm;		/* length of hose connection */
 
 module hole_at( x, y, dia) {
