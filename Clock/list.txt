@@ -1,0 +1,90 @@
+
+Printing the clock starting 12/10/23.
+
+Start with "Dynamic Quality" in cura 4.12.
+Changes:
+
+Layer Height:		0.16 -> 0.15
+Build Plate temp:	50   -> 60
+Initial layer Horiz E.. 0    -> -0.12
+Z seam alignment        def  -> random
+Infill                  20   -> 30
+
+
+frame-back-bottom.stl
+frame-back-center.stl
+frame-back-left-hook.stl
+frame-back-left.stl
+frame-back-right.stl
+frame-back-top.stl
+frame-dial-numbers.stl
+frame-dial-roman.stl
+frame-front-left.stl
+frame-front-right.stl
+gear0-pallet.stl
+gear1-esc26-10.stl			12/10/23 red
+gear2-50-10.stl				12/10/23 red
+gear3-50-12.stl				12/10/23 red
+gear4-54-10-32day.stl
+gear4-54-14-21day.stl
+gear4-54-18-15day.stl
+gear4-54-24-10day.stl
+gear4-54-28-7day.stl			12/11/23 red (poor adhesion?)
+gear4b-18.stl
+gear4b-18-tight.stl
+gear5-48-12.stl
+gear6-54.stl
+gear7-38-ratchet-7day.stl
+gear7-42-ratchet-10day.stl
+gear7-48-ratchet-15day.stl
+gear7-52-ratchet-21day.stl
+gear7-56-ratchet-32day.stl
+gear7b-16.stl
+gear7c-clicks.stl
+gear8-50-0p75.stl
+gear9-56.stl
+gear9-inserts.stl
+hands-serpentine.stl
+hands-spade.stl
+knob-0p25.stl
+knob-0p40.stl
+pendulum-bob.stl
+pendulum-shaft-lower.stl
+pendulum-shaft-mid-long.stl
+pendulum-shaft-mid-short.stl
+pendulum-shaft-mid.stl
+pendulum-shaft.stl
+pendulum-shaft-upper.stl
+spacer-0.stl
+spacer-1.stl
+spacer-2.stl
+spacer-4a.stl
+spacer-4b.stl
+spacer-7.stl
+spacer-8.stl
+spacer-9.stl
+spacers.stl
+swing-gauge.stl
+weight-shell-bottom-2p4.stl
+weight-shell-bottom-2p6.stl
+weight-shell-bottom-2p8.stl
+weight-shell-bottom-3p0.stl
+weight-shell-bottom-3p2.stl
+weight-shell-pulley.stl
+weight-shell-quarter-2p4.stl
+weight-shell-quarter-2p6.stl
+weight-shell-quarter-2p8.stl
+weight-shell-quarter-3p0.stl
+weight-shell-quarter-3p2.stl
+weight-shell-short-2p4.stl
+weight-shell-short-2p6.stl
+weight-shell-short-2p8.stl
+weight-shell-short-3p0.stl
+weight-shell-short-3p2.stl
+weight-shell-top-2p4.stl
+weight-shell-top-2p6.stl
+weight-shell-top-2p8.stl
+weight-shell-top-3p0.stl
+weight-shell-top-3p2.stl
+winding-key-handle.stl
+winding-key-knob.stl

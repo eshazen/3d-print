@@ -23,9 +23,9 @@ $INSBASE
   9
 $EXTMIN
  10
-0
+-7.654042494670958e-18
  20
-0
+-0
  30
 0
   9
@@ -311,7 +311,7 @@ $DIMUPT
   9
 $DIMDEC
  70
-    2
+    4
   9
 $DIMTDEC
  70
@@ -335,7 +335,7 @@ $DIMAUNIT
   9
 $DIMADEC
  70
-    0
+    2
   9
 $DIMALTRND
  40
@@ -775,9 +775,9 @@ $MAXACTVP
   9
 $PINSBASE
  10
-0
+2.25
  20
-0
+3.75
  30
 0
   9
@@ -799,6 +799,20 @@ $PEXTMAX
  20
 0
  30
+0
+  9
+$GRIDMODE
+ 70
+    1
+  9
+$SNAPSTYLE
+ 70
+    0
+  9
+$GRIDUNIT
+ 10
+0
+ 20
 0
   9
 $PLIMMIN
@@ -871,7 +885,7 @@ $LWDISPLAY
   9
 $INSUNITS
  70
-    0
+    1
   9
 $HYPERLINKBASE
   1
@@ -899,7 +913,7 @@ $EXTNAMES
   9
 $PSVPSCALE
  40
-0
+1
   9
 $OLESTARTUP
 290
@@ -1107,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-5.121812071929948
+3.529599572368431
  22
-2.018401427051025
+1.224728526315793
  13
 0
  23
@@ -1135,7 +1149,7 @@ AcDbViewportTableRecord
  37
 0
  40
-7.836704132259143
+4.689122644736855
  41
 1.816203143893591
  42
@@ -2289,6 +2303,34 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
+italicc
+ 70
+    0
+ 40
+0
+ 41
+1
+ 50
+0
+ 71
+    0
+ 42
+1
+  3
+italicc
+  4
+
+  0
+STYLE
+  5
+4C
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
 simplex
  70
     0
@@ -2365,7 +2407,7 @@ ACAD
   0
 APPID
   5
-4C
+4D
 330
 9
 100
@@ -2397,7 +2439,7 @@ AcDbDimStyleTable
   0
 DIMSTYLE
 105
-4D
+4E
 330
 A
 100
@@ -2409,7 +2451,7 @@ Standard
  70
     0
  40
-1
+2.5
  41
 2.5
  42
@@ -2461,7 +2503,7 @@ Standard
  77
     0
  78
-    1
+    8
  79
     0
 170
@@ -2499,7 +2541,7 @@ Standard
 277
     2
 278
-    0
+   44
 279
     0
 280
@@ -2671,30 +2713,6 @@ ENTITIES
   0
 LINE
   5
-4E
-100
-AcDbEntity
-  8
-0
-  6
-ByLayer
- 62
-  256
-370
-   30
-100
-AcDbLine
- 10
-0.75
- 20
-0
- 11
-0.75
- 21
-0.125
-  0
-LINE
-  5
 4F
 100
 AcDbEntity
@@ -2709,11 +2727,11 @@ ByLayer
 100
 AcDbLine
  10
-2.438
+0.75
  20
 0
  11
-2.438
+0.75
  21
 0.125
   0
@@ -2733,6 +2751,30 @@ ByLayer
 100
 AcDbLine
  10
+2.438
+ 20
+0
+ 11
+2.438
+ 21
+0.125
+  0
+LINE
+  5
+51
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   30
+100
+AcDbLine
+ 10
 4.375
  20
 0
@@ -2743,7 +2785,7 @@ AcDbLine
   0
 LINE
   5
-51
+52
 100
 AcDbEntity
   8
@@ -2767,7 +2809,7 @@ AcDbLine
   0
 MTEXT
   5
-52
+53
 100
 AcDbEntity
   8
@@ -2813,7 +2855,7 @@ simplex
   0
 MTEXT
   5
-53
+54
 100
 AcDbEntity
   8
@@ -2859,7 +2901,7 @@ standard
   0
 MTEXT
   5
-54
+55
 100
 AcDbEntity
   8
@@ -2889,7 +2931,7 @@ AcDbMText
   1
 Heaters on
   7
-
+standard
 210
 0
 220
@@ -2905,7 +2947,7 @@ Heaters on
   0
 MTEXT
   5
-55
+56
 100
 AcDbEntity
   8
@@ -2935,7 +2977,7 @@ AcDbMText
   1
 HV on
   7
-
+standard
 210
 0
 220
@@ -2947,44 +2989,6 @@ HV on
  73
     2
  44
-1
-  0
-LWPOLYLINE
-  5
-56
-100
-AcDbEntity
-  8
-0
-  6
-ByLayer
- 62
-  256
-370
-   30
-100
-AcDbPolyline
- 90
-    4
- 70
-    1
- 43
-0
- 10
-0
- 20
-0
- 10
-6.5
- 20
-0
- 10
-6.5
- 20
-1
- 10
-0
- 20
 1
   0
 MTEXT
@@ -3019,7 +3023,7 @@ AcDbMText
   1
 (Left)
   7
-
+standard
 210
 0
 220
@@ -3065,7 +3069,7 @@ AcDbMText
   1
 (Left)
   7
-
+standard
 210
 0
 220
@@ -3111,7 +3115,7 @@ AcDbMText
   1
 (2 min delay)
   7
-
+standard
 210
 0
 220
@@ -3124,6 +3128,186 @@ AcDbMText
     2
  44
 1
+  0
+MTEXT
+  5
+5A
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   13
+100
+AcDbMText
+ 10
+1.281428921052635
+ 20
+0.8731860789473707
+ 30
+0
+ 40
+0.125
+ 41
+2.413690416666666
+ 71
+    5
+ 72
+    1
+  1
+Oddblock Octal Stereo
+  7
+italicc
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1
+  0
+LINE
+  5
+5B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   30
+100
+AcDbLine
+ 10
+0
+ 20
+1
+ 11
+0.125
+ 21
+1
+  0
+LINE
+  5
+5C
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   30
+100
+AcDbLine
+ 10
+0
+ 20
+1
+ 11
+-7.654042494670958e-18
+ 21
+0.875
+  0
+LWPOLYLINE
+  5
+5D
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+    0
+100
+AcDbPolyline
+ 90
+    4
+ 70
+    1
+ 43
+0
+ 10
+0
+ 20
+0
+ 10
+6.5
+ 20
+0
+ 10
+6.5
+ 20
+1
+ 10
+0
+ 20
+1
+  0
+LINE
+  5
+5E
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   30
+100
+AcDbLine
+ 10
+6.5
+ 20
+0
+ 11
+6.375
+ 21
+0
+  0
+LINE
+  5
+5F
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   30
+100
+AcDbLine
+ 10
+6.5
+ 20
+-0
+ 11
+6.5
+ 21
+0.125
   0
 ENDSEC
   0

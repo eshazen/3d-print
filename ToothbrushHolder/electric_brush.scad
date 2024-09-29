@@ -5,7 +5,10 @@
 
 use <chamfercyl.scad>
 
-sizeX = 180;
+holes = 2;
+
+// sizeX = 180;
+sizeX = 50*holes;
 sizeY = 10;
 sizeZ = 40;
 
@@ -16,8 +19,6 @@ mountY = 50;
 
 topDia = 27;
 botDia = 12;
-
-holes = 4;
 
 holespc = sizeX/(holes+1);
 
