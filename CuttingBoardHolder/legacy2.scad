@@ -20,7 +20,7 @@ thk = 3.0;			/* material thickness */
 spc = 1*mm;   // slot center-to-center
 gap = 0.063*mm;   // extra slot width
 
-depth = 3*mm;   // slot depth
+depth = 2*mm;   // slot depth
 base_dep = 0.75*mm; // base depth below slots
 
 hgt = 12*mm;       // height (only for lean)
@@ -29,7 +29,7 @@ lean = 2*mm;       // distance to lean at height
 base_wid = lean + spc * nslot + 0.5*mm;
 
 // length for bottom piece
-bottom_len = 6*mm;
+bottom_len = 5*mm;
 
 tab_spc = base_wid/(ntab*2+1);
 
@@ -77,14 +77,23 @@ module tab_slots() {
      }
 }
 
+// tab slot offset from edge
+tso = 1.5 * thk;
+// space between side panels
+tss = bottom_len - 2*tso - 2*thk;
+
 module bottom() {
      difference() {
 	  cube( [base_wid, bottom_len, thk]);
-	  translate( [0, bottom_len-2*thk, -e])
+	  translate( [0, bottom_len-thk-tso, -e])
 	       tab_slots();
-	  translate( [0, thk, -e])
+	  translate( [0, tso, -e])
 	  tab_slots();
      }
+}
+
+module brace() {
+  cube( [tss, base_dep, thk]);
 }
 
 part_spc = thk*2;
@@ -97,5 +106,11 @@ projection() {
      rotate( [0, 0, 90])
      translate( [-base_wid-part_spc, -bottom_len, 0])
 	  bottom();
+     translate( [bottom_len+part_spc, -base_dep-part_spc, 0]) {
+       brace();
+       translate( [0, -base_dep-part_spc, 0])
+	 brace();
+     }
+       
 }
 
